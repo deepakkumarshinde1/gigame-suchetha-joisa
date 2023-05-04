@@ -32,3 +32,10 @@ ES6 ===>
 
     # spread operator's  (...)
         
+
+# class
+# rest params
+# generators
+
+
+# async await (call api) i.e data from servers
