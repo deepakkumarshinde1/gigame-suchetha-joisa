@@ -1,27 +1,35 @@
-// rest params ==> array
-function add(...values) {
-  // let result = a + b;
-  let result = values.reduce((pValue, cValue) => {
-    return pValue + cValue;
-  }, 0);
-  console.log(result);
-}
+// promise
+// deepak is present
+//    thus there will session
 
-// add(1, 20, 40);
+// older way
+// promise ==> true ===> resolve ==> .then(()=>{})
+// promise ==> false ===> reject ==> .catch(()=>{})
 
-function* genId() {
-  for (let index = 1; index <= 10; index++) {
-    yield index; // return value & halt the function
-  }
-}
+// new way
+// promise ==> true ===> resolve ==> try{ ... }
+// promise ==> false ===> reject ==> catch(error){}
 
-let getMyIds = genId();
-// create user ==>
-console.log(getMyIds.next());
+// Before es6 ==> new Promise ==> async in nature
 
-// run function & get id 1
-// after some process run function & get id 2
+// try {
+// } catch (error) {} // sync in nature
 
-let getMyIds1 = genId();
+// JS run only on one thread
+// sync ==> code is block
 
-// redux-saga ==> gen methods
+// event loop (async)
+// web api ==> async
+//    promise , async/await , DOM (document object model),
+//    fetch (ajax) , xhr (ajax) , setTimeout , setInterval
+console.log("file is uploading on server");
+setTimeout(() => {
+  console.log("file uploaded in sec 10s");
+}, 10 * 1000); // 1s === 1000 ms
+
+console.log("make a payment started on server");
+setTimeout(() => {
+  console.log("payment done in sec 30s");
+}, 30 * 1000); // 1s === 1000 ms
+
+console.log("watch a video");
